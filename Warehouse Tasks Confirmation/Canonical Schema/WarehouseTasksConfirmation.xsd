@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.coop.dk/integration/warehousetaskconfirmation" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.coop.dk/integration/warehousetaskconfirmation" version="1.0">
+	<xs:element name="WHTaskConfirmationHeader" type="WHTaskConfirmationHeaderType"/>
+	<xs:complexType name="WHTaskConfirmationHeaderType">
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="0" name="WarehouseNumber">
+				<xs:annotation>
+					<xs:documentation>Warehouse Number/Warehouse Complex</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="WarehouseOrderNumber">
+				<xs:annotation>
+					<xs:documentation>Warehouse Order Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="UserName">
+				<xs:annotation>
+					<xs:documentation>User Name for Confirmation</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="WHOIndicator">
+				<xs:annotation>
+					<xs:documentation>Indicator: Confirm Entire Warehouse Order (Actual = Target)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="Resource">
+				<xs:annotation>
+					<xs:documentation>Resource (Means of Transportation or User)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="18"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="Processor">
+				<xs:annotation>
+					<xs:documentation>Processor</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="StartDate">
+				<xs:annotation>
+					<xs:documentation>Start Date</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="StartTime">
+				<xs:annotation>
+					<xs:documentation>Start Time</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ConfirmationDate">
+				<xs:annotation>
+					<xs:documentation>Confirmation Date</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ConfirmationTime">
+				<xs:annotation>
+					<xs:documentation>Confirmation Time</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="LineItem" type="LineItemType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LineItemType">
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="0" name="WarehouseTask">
+				<xs:annotation>
+					<xs:documentation>Warehouse Task</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="WHOIndicator">
+				<xs:annotation>
+					<xs:documentation>Warehouse Task Confirmation</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ActualQty">
+				<xs:annotation>
+					<xs:documentation>Actual Quantity in Alternative Unit of Measure</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="33"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="DestDifferenceQty">
+				<xs:annotation>
+					<xs:documentation>Destination difference qty. in alternative unit</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="33"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ZeroStockCheckStatus">
+				<xs:annotation>
+					<xs:documentation>Status of Zero Stock Check in Warehouse Task</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="StockKeepingUnit">
+				<xs:annotation>
+					<xs:documentation>Alternative Unit of Measure for Stockkeeping Unit</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="DiffIndicatorCategory">
+				<xs:annotation>
+					<xs:documentation>Difference Indicator Category</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="HUIdentification">
+				<xs:annotation>
+					<xs:documentation>Handling Unit Identification</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="HURemoval">
+				<xs:annotation>
+					<xs:documentation>Confirmation in Bulk Storage Area: Removal of Complete HU</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="DestStorageBin">
+				<xs:annotation>
+					<xs:documentation>Destination Storage Bin</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="18"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="Sequence">
+				<xs:annotation>
+					<xs:documentation>Sequential Number of WT Data Row Within a WT Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="4"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="PartialQtyFlag">
+				<xs:annotation>
+					<xs:documentation>Flag: Confirm Partial Quantity for Warehouse Task</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="BatchNumber">
+				<xs:annotation>
+					<xs:documentation>Batch Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ValuationQty">
+				<xs:annotation>
+					<xs:documentation>Valuation Quantity</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="33"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ValuationQtyDiff">
+				<xs:annotation>
+					<xs:documentation>Valuation Quantity</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="33"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="ValuationQtyUnit">
+				<xs:annotation>
+					<xs:documentation>Unit for Valuation Quantity</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

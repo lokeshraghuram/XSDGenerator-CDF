@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Description : This XSD is for payload element and it refers to the root element of canonical XSD. No child elements should be declared under this element.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.coop.dk/integration/warehousetaskconfirmation" targetNamespace="http://www.coop.dk/integration/warehousetaskconfirmation" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="WarehouseTasksConfirmation.xsd"/>
+	<xs:element name="Payload" type="PayloadType">
+		<xs:annotation>
+			<xs:documentation>Root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PayloadType">
+		<xs:sequence>
+			<xs:element ref="WHTaskConfirmationHeader" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

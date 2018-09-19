@@ -1,0 +1,324 @@
+WBBDLD05	HPR Assortment List: Material Data with Article Hierarchy
+IDOC
+
+EDI_DC40	IDoc control record for the interface to the external system
+TABNAM	Name of Table Structure
+MANDT	Client	string	3
+DOCNUM	IDoc number	string	16
+DOCREL	SAP Release for IDoc	string	4
+STATUS	Status of IDoc	string	2
+DIRECT	Direction	string	Outbound	Inbound
+OUTMOD	Output mode	string	1
+EXPRSS	Overriding in inbound processing	string	1
+TEST	Test flag	string	1
+IDOCTYP	Name of basic type
+CIMTYP	Extension (defined by customer)
+MESTYP	Message type	string	30
+MESCOD	Message code	string	3
+MESFCT	Message Function	string	3
+STD	EDI standard, flag	string	1
+STDVRS	EDI standard, version and release	string	6
+STDMES	EDI message type	string	6
+SNDPOR	Sender port (SAP System, external subsystem)	string	10
+SNDPRT	Partner type of sender	string	2
+SNDPFC	Partner Function of Sender	string	2
+SNDPRN	Partner Number of Sender	string	10
+SNDSAD	Sender address (SADR)	string	21
+SNDLAD	Logical address of sender	string	70
+RCVPOR	Receiver port	string	10
+RCVPRT	Partner Type of Receiver	string	2
+RCVPFC	Partner function of recipient	string	2
+RCVPRN	Partner Number of Receiver	string	10
+RCVSAD	Recipient address (SADR)	string	21
+RCVLAD	Logical address of recipient	string	70
+CREDAT	Created On	string	8
+CRETIM	Created at	string	6
+REFINT	Transmission file (EDI Interchange)	string	14
+REFGRP	Message group (EDI Message Group)	string	14
+REFMES	Message (EDI Message)	string	14
+ARCKEY	Key for external message archive	string	70
+SERIAL	Serialization	string	20	string
+
+E1WBB01	Assortment list IDoc: Identification
+LOCNR	Customer number for plant	string	10
+MATNR	Material Number	string	18
+GLTAB	Change valid from	string	8
+AENKZ	Change indicator for assortment list	string	4
+AENTP	Change category	string	4
+SPRAS	Language code for texts	string	1
+WAERS	Currency Key	string	5
+LANG_ISO	2-Character SAP Language Code	string	2
+BSORT	Sorting Procedure in Assortment List	string	1
+SEG_REPEAT	Indicator: Repetition of Time-Dependent Segments	string	1
+DYN_REDUC	Indicates that not all the segments have to be available	string	1
+MATNR_LONG	Material Number	string	40
+
+E1WBB03	Assortment list IDoc: Unit of measure
+MEINH	Unit of measure / packing	string	3
+UMREZ	Numerator for Conversion to Base Units of Measure	string	5
+UMREN	Denominator for conversion to base units of measure	string	5
+LAENG	Length	string	17
+BREIT	Width	string	17
+HOEHE	Height	string	17
+MEABM	Unit of Dimension for Length/Width/Height	string	3
+VOLUM	Volume	string	17
+VOLEH	Volume unit	string	3
+BRGEW	Gross weight	string	17
+GEWEI	Weight Unit	string	3
+C_INFO_03	Function	string	3
+
+
+
+
+E1WBB04	Assortment list IDoc: EAN/UPC
+EAN11	International Article Number (EAN/UPC)	string	18
+EANTP	Category of International Article Number (EAN)	string	2
+HPEAN	Indicator: Main EAN	string	1
+C_INFO_04	Function	string	3	string
+E1WBB07	Assortment list IDoc: Conditions per unit of measure
+KSCHL	Type of condition/discount	string	4
+AKTNR	Promotion	string	15
+DATAB	Validity start date of the condition record	string	8
+STIME	Time of Price Activation	string	4
+DATBI	Validity end date of the condition record	string	8
+ETIME	Time of price deactivation	string	4
+FVERW	Free for use	string	4
+STOCK_COUNT	General Flag	string	1
+E1WBB08	Assortment list IDoc: Condition value per unit of meas.
+VORZN	+/- sign of condition	string	1
+KSATZ	Condition rate, percentage conditions	string	10
+KWERT	Amount	string	20
+KPEIN	Quantity	string	10
+CURCY	Currency Key	string	5
+E1WBBSC	Assortment list IDoc: Pricing scale
+SCALE_TYPE	Scale Basis Indicator	string	1
+SCABAS_VAL	Scale value	string	17
+SCABAS_QUAN	Condition scale quantity	string	17
+SIGN	+/- sign of condition	string	1
+COND_VALUE	Condition Amount or Percentage	string	13	string	string	string
+E1WBB11	Assortment list IDoc: Promotion
+AKTIO	Promotion	string	10
+VKDAB_A	On Sale to Consumers From	string	8
+VKDBI_A	On Sale To Consumers To	string	8
+AKTHE	Promotion theme	string	10
+AKART	Promotion Type	string	4
+AKTYP	no longer used	string	1
+AUFME	Promotion plan: Material allocation table quantity	string	17
+AKLIZ	Planned Delivery Time in Days	string	3
+FBDAT	Earliest Order Date with Supplier	string	8
+SBDAT	Latest Order Date with Supplier	string	8
+FLDAT	Earliest delivery date	string	8
+SLDAT	Latest delivery date	string	8
+MIABG	Minimum order qty for promotional material	string	17
+NDISP	Replenishment indicator	string	2
+RGART	Return type for promotional material	string	1
+PROM_TYPE	Promotion Category	string	4	string
+E1WBB20	Assortment list IDOC: texts per unit of measure
+SPRAS_ME	Language Key	string	1
+MTXID_ME	Material master: short text ID per unit of measure	string	2
+LFDNR_ME	Sequential Number	string	2
+MAKTM_ME	Material description for unit of measure	string	40
+LAISO_ME	2-Character SAP Language Code	string	2
+C_INFO_20	Function	string	3	string
+E1WTADAL1	Assortment list IDoc: Additionals
+ADDIMATNR	Material number for additional	string	18
+ADDIMAKTX	Material description	string	40
+ADDIMATKL	Material group for an additional	string	9
+ADDIMATKL_TXT	Material Group Description	string	20
+ADDIFM	Procedure for additionals	string	4
+ADDIFM_TXT	Additionals: Description for the procedure for additionals	string	40
+ADDIINVOC	Bill-to party for additional ordered from an external source	string	1
+ADDIINHME	ISO code for the content unit	string	3
+ADDIINHBR	Gross contents	string	15
+ADDIINHAL	Net contents	string	15
+ADDIVPREH	Comparison price unit	string	6
+ADDINUM	Additionals: Number control	string	1
+ADDINUM_TXT	Description of Rule	string	60
+ADDINUMBER	Number of additionals	string	11
+ADDIREL	Relevant for additionals	string	1
+ADDIMATNR_EXTERNAL	Long Material Number for ADDIMATNR Field	string	40
+ADDIMATNR_VERSION	Version Number for ADDIMATNR Field	string	10
+ADDIMATNR_GUID	External GUID for ADDIMATNR Field	string	32
+ADDIMATNR_LONG	Material number for additional	string	40
+E1WTADAL2	Assortment list IDoc: Texts for additionals
+ADDISPRAS	2-Character SAP Language Code	string	2
+ADDIROWNR	Line number in a text for an additional	string	4
+ADDITXT	Text for additional per unit of measure of a material	string	40	string	string
+E1WBBEM	Assorment List IDoc: Empties
+AL_EMP_MATNR	BOM component	string	18
+AL_EMP_QUANT	Component quantity	string	18
+AL_EMP_UNIT	Unit of measure of BOM component	string	3
+AL_EMP_MATNR_EXTERNAL	Long Material Number for Field AL_EMP_MATNR	string	40
+AL_EMP_MATNR_VERSION	Version Number for Field AL_EMP_MATNR	string	10
+AL_EMP_MATNR_GUID	External GUID for Field AL_EMP_MATNR	string	32
+AL_EMP_MATNR_LONG	BOM component	string	40	string	string
+
+E1WBB02	Assortment list IDoc: Master data
+LAEDA	Date of Last Change	string	8
+LIQDT	Deletion date	string	8
+LVORM	Flag Material for Deletion at Client Level	string	1
+BBTYP	Assortment List Type	string	1
+VERNR	Assortment list version no.	string	6
+MTART	Material type	string	4
+MATKL	Material Group	string	9
+ABTNR	Department number	string	4
+ATTYP	Material Category	string	2
+SATNR	Cross-Plant Configurable Material (18 ch compatibility mode)	string	18
+BASME	Base Unit of Measure	string	3
+PRDHA	Product hierarchy	string	18
+PLGTP	no longer used	string	1
+SERVV	Service agreement for a retail material	string	2
+SAISO	Season Category	string	4
+SAISJ	Season Year	string	4
+MHDHB	Total shelf life	string	5
+MHDRZ	Minimum Remaining Shelf Life	string	5
+MHDLP	Storage percentage	string	3
+MLGUT	Empties Bill of Material	string	1
+PRICE_BAND	Price Band Category	string	2
+PR_REF_MAT	Cross-Distribution-Chain Pricing Reference Material	string	18
+PLTYP_P	Price determination: Item-based price list type	string	2
+IPRKZ	Period Indicator for Shelf Life Expiration Date	string	1
+NTGEW	Net weight	string	15
+C_INFO_02	Function	string	3
+PR_REF_MAT_EXTERNAL	Long Material Number for PR_REF_MAT Field	string	40
+PR_REF_MAT_VERSION	Version Number for PR_REF_MAT Field	string	10
+PR_REF_MAT_GUID	External GUID for PR_REF_MAT Field	string	32
+SATNR_EXTERNAL	Long Material Number for Field SATNR	string	40
+SATNR_VERSION	Version Number for Field SATNR	string	10
+SATNR_GUID	External GUID for Field SATNR	string	32
+MARA_BSTME	Purchase Order Unit of Measure	string	3
+MARA_VABME	Variable Purchase Order Unit Active	string	1
+MARA_INHME	Content unit	string	3
+SATNR_LONG	Cross-Plant Configurable Material (40 ch tech. necessary)	string	40
+PR_REF_MAT_LONG	Cross-Distribution-Chain Pricing Reference Material	string	40	string
+
+
+
+
+
+
+E1WBB09	Assortment list IDoc: POS data
+VKDAB	On sale from	string	8
+VKDBI	On sale to	string	8
+KWDHT	No repeat key	string	1
+PRERF	Price required	string	1
+DEINK	Message if material is used in Purchasing	string	1
+MSTDE	Date from which the cross-plant material status is valid	string	8
+SPVBC	Blocked for sales order	string	1
+SPVBD	Blocked for product proposal	string	1
+MSTDV	Date from which the X-distr.-chain material status is valid	string	8
+RBZUL	Discount allowed	string	1
+WAGAR	Flag: material for weighing	string	1
+PRIMW	Price including sales tax	string	1
+PHFIL	Flag: price autonomy of store	string	1
+PRDRU	Display price on cash register display and print on receipt	string	1
+ARANZ	Display material on cash register display	string	1
+SCAGR	Scales group	string	4
+WAUFT	Blocked for allocation table	string	1
+WREPL	Blocked for Replenishment	string	1
+WSTOR	Blocked for store order	string	1
+C_INFO_09	Function	string	3	string
+E1WBB10	Assortment list IDoc: Text
+MTXID	Qualifier text	string	4
+MAKTM	Material description for unit of measure	string	40
+C_INFO_10	Function	string	3	string
+E1WBB12	Assortment list IDoc: Logistics
+DISPR	Material: MRP profile	string	4
+EKGRP	Purchasing Group	string	3
+LSTFL	no longer used	string	1
+LGRAD	Service level	string	4
+EISBE	Safety stock	string	17
+MINBE	Reorder Point	string	17
+MABST	Maximum stock level	string	17
+RDPRF	Rounding Profile	string	4
+NFMAT	Follow-Up Material	string	18
+AUSDT	Effective-Out Date	string	8
+SSTUF	Assortment grade	string	2
+PFLKS	External assortment priority	string	1
+MAABC	ABC Indicator	string	1
+VRKME	Sales unit	string	3
+LSTAB	Listed from	string	8
+LSTBI	Listed to	string	8
+BWSCL	Source of Supply	string	1
+BWVOR	Procurement rule	string	1
+LI_PROC_ST	Listing procedure for store or other assortment categories	string	2
+RACKJOB	Supplier Number of a Rack Jobber	string	10
+DISMM	MRP Type	string	2
+PBIND	Indicator for price fixing	string	1
+PMATN	Pricing Reference Material	string	18
+SOBST	Target stock at recipient	string	15
+PRWUG	Minimum target stock	string	15
+PRWOG	Maximum target stock	string	15
+TRCOV	Target range of coverage	string	4
+SKTOF	Cash discount indicator	string	1
+C_INFO_12	Function	string	3
+DISPO	MRP Controller	string	3
+XMCNG	Negative stocks allowed in plant	string	1
+STRLI	List as component of a structured material	string	1
+MRPPP	PPC planning calendar	string	3
+LFRHY	Planning cycle	string	3
+ASORT	Assortment	string	10
+NFMAT_EXTERNAL	Long Material Number for Field NFMAT	string	40
+NFMAT_VERSION	Version Number for Field NFMAT	string	10
+NFMAT_GUID	External GUID for Field NFMAT	string	32
+PMATN_EXTERNAL	Long Material Number for Field PMATN	string	40
+PMATN_VERSION	Version Number for Field PMATN	string	10
+PMATN_GUID	External GUID for Field PMATN	string	32
+NFMAT_LONG	Follow-Up Material	string	40
+PMATN_LONG	Pricing Reference Material	string	40	string
+E1WBB13	Assortment list IDoc: Vendor
+RELIF	Regular Supplier	string	1
+LOCLB	Supplying plant (source of supply)	string	4
+LIFNR	Vendor's account number	string	10
+IDNLF	Material number used by vendor	string	22
+LTSNR	Supplier Subrange	string	6
+LTSSF	Sort Sequence Number	string	5
+LIFAB	Available (Deliverable) From	string	8
+LIFBI	Available (Deliverable) Until	string	8
+MEINS	Purchase Order Unit of Measure	string	3
+VABME	Variable Purchase Order Unit Active	string	1
+APLFZ	Planned Delivery Time in Days	string	3
+MINBM	Minimum Purchase Order Quantity	string	17
+NORBM	Standard Purchase Order Quantity	string	17
+AUSME	Unit of issue	string	3
+LIZYK	Delivery cycle	string	4
+PRE_VENDOR	Prior Supplier	string	10
+KDMAT35	Material Number Used by Supplier	string	35
+BSTMA	Maximum Purchase Order Quantity	string	15
+UNTTO	Underdelivery Tolerance Limit	string	5
+UEBTO	Overdelivery Tolerance Limit	string	5
+RUECK	Return Agreement	string	2
+C_INFO_13	Function	string	3
+DATAB_13	Change valid from	string	8
+IDNLF_EXTERNAL	Material Number Used by Vendor	string	40
+IDNLF_VERSION	Material Number Used by Vendor	string	10
+IDNLF_GUID	Material Number Used by Vendor	string	32
+KDMAT35_EXTERNAL	Long Material Number (Future Development) for KDMAT Field	string	40
+KDMAT35_VERSION	Version Number (Future Development) for KDMAT35 Field	string	10
+KDMAT35_GUID	External GUID (Future Development) for KDMAT35 Field	string	32	string
+E1WBB16	Assortment list IDoc: Taxes
+MWSKZ	Tax on sales/purchases code	string	10	string
+E1WBB18	Assortment list IDoc: Layout
+LAYGR	Layout Module	string	10
+SORF1	Sort sequence number in layout module	string	10
+LAYVR	Layout	string	10
+LNGLV	Layout area number	string	10
+HPLGR	Indicator: Main layout module	string	1
+MELAY	Unit of Measure for Display	string	3
+C_INFO_18	Function	string	3	string
+E1WBB21	Assortment list IDoc: BOM
+AL_BOM_MATNR	Material number of BOM component	string	18
+AL_BOM_QUANT	Component quantity	string	18
+AL_BOM_UNIT	Unit of measure of BOM component	string	3
+AL_BOM_MATNR_EXTERNAL	Long Material Number for Field AL_BOM_MATNR	string	40
+AL_BOM_MATNR_VERSION	Version Number for Field AL_BOM_MATNR	string	10
+AL_BOM_MATNR_GUID	External GUID for Field AL_BOM_MATNR	string	32
+AL_BOM_MATNR_LONG	Material number of BOM component	string	40	string
+E1WBB22	IDoc for Assortment Lists: Material Valuation
+BWTAR	Valuation Type	string	10
+BWTTY	Valuation Category	string	1	string
+E1WBBAH	Assortment List IDoc: Article Hierarchy Assignment
+HIER_ID	Hierarchy	string	2
+NODE	Hierarchy Node	string	18
+GLTAB	Change valid from	string	8	string	string	string
+Process finished with exit code 0

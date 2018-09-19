@@ -1,0 +1,1964 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"additionalProperties": false,
+	"definitions": {
+		".WPDWGR01": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"IDOC": {
+					"$ref": "#/definitions/WPDWGR.WPDWGR01"
+				}
+			},
+			"required": [
+				"IDOC"
+			],
+			"type": "object"
+		},
+		"EDI_DC40.WPDWGR.WPDWGR01": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"ARCKEY": {
+					"additionalProperties": false,
+					"description": "Key for external message archive",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 70,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"CIMTYP": {
+					"additionalProperties": false,
+					"description": "Extension (defined by customer)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 30,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"CREDAT": {
+					"additionalProperties": false,
+					"description": "Created on",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 8,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"CRETIM": {
+					"additionalProperties": false,
+					"description": "Created at",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 6,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"DIRECT": {
+					"additionalProperties": false,
+					"description": "Direction",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"enum": [
+								"1",
+								"2"
+							],
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"DOCNUM": {
+					"additionalProperties": false,
+					"description": "IDoc number",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 16,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"DOCREL": {
+					"additionalProperties": false,
+					"description": "SAP Release for IDoc",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 4,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"EXPRSS": {
+					"additionalProperties": false,
+					"description": "Overriding in inbound processing",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"IDOCTYP": {
+					"additionalProperties": false,
+					"description": "Name of basic type",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"$ref": "#/definitions/xsd:string"
+						}
+					},
+					"type": "object"
+				},
+				"MANDT": {
+					"additionalProperties": false,
+					"description": "Client",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 3,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"MESCOD": {
+					"additionalProperties": false,
+					"description": "Message code",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 3,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"MESFCT": {
+					"additionalProperties": false,
+					"description": "Message function",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 3,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"MESTYP": {
+					"additionalProperties": false,
+					"description": "Message type",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"$ref": "#/definitions/xsd:string"
+						}
+					},
+					"type": "object"
+				},
+				"OUTMOD": {
+					"additionalProperties": false,
+					"description": "Output mode",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RCVLAD": {
+					"additionalProperties": false,
+					"description": "Logical address of receiver",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 70,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RCVPFC": {
+					"additionalProperties": false,
+					"description": "Partner function of receiver",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RCVPOR": {
+					"additionalProperties": false,
+					"description": "Receiver port",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RCVPRN": {
+					"additionalProperties": false,
+					"description": "Partner number of receiver",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RCVPRT": {
+					"additionalProperties": false,
+					"description": "Partner type of receiver",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RCVSAD": {
+					"additionalProperties": false,
+					"description": "Receiver address (SADR)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 21,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"REFGRP": {
+					"additionalProperties": false,
+					"description": "Message group (EDI Message Group)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 14,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"REFINT": {
+					"additionalProperties": false,
+					"description": "Transmission file (EDI Interchange)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 14,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"REFMES": {
+					"additionalProperties": false,
+					"description": "Message (EDI Message)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 14,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SERIAL": {
+					"additionalProperties": false,
+					"description": "Serialization",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 20,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SNDLAD": {
+					"additionalProperties": false,
+					"description": "Logical address of sender",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 70,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SNDPFC": {
+					"additionalProperties": false,
+					"description": "Partner function of sender",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SNDPOR": {
+					"additionalProperties": false,
+					"description": "Sender port (SAP system, external subsystem)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SNDPRN": {
+					"additionalProperties": false,
+					"description": "Partner number of sender",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SNDPRT": {
+					"additionalProperties": false,
+					"description": "Partner type of sender",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"SNDSAD": {
+					"additionalProperties": false,
+					"description": "Sender address (SADR)",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 21,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"STATUS": {
+					"additionalProperties": false,
+					"description": "Status of IDoc",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"STD": {
+					"additionalProperties": false,
+					"description": "EDI standard, flag",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"STDMES": {
+					"additionalProperties": false,
+					"description": "EDI message type",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 6,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"STDVRS": {
+					"additionalProperties": false,
+					"description": "EDI standard, version, and release",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 6,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"TABNAM": {
+					"additionalProperties": false,
+					"description": "Name of table structure",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"$ref": "#/definitions/xsd:string"
+						}
+					},
+					"type": "object"
+				},
+				"TEST": {
+					"additionalProperties": false,
+					"description": "Test flag",
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"DIRECT",
+				"IDOCTYP",
+				"MESTYP",
+				"RCVPOR",
+				"RCVPRN",
+				"SNDPOR",
+				"SNDPRN",
+				"SNDPRT",
+				"TABNAM",
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"WPDWGR.WPDWGR01": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@BEGIN": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"E1WPW01": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/WPDWGR01.E1WPW01"
+						},
+						{
+							"items": {
+								"$ref": "#/definitions/WPDWGR01.E1WPW01"
+							},
+							"minItems": 1,
+							"type": "array"
+						}
+					]
+				},
+				"EDI_DC40": {
+					"$ref": "#/definitions/EDI_DC40.WPDWGR.WPDWGR01"
+				}
+			},
+			"required": [
+				"E1WPW01",
+				"EDI_DC40",
+				"@BEGIN"
+			],
+			"type": "object"
+		},
+		"WPDWGR01.E1WPW01": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"AENDDATUM": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 8,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"AENDERER": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"AENDKENNZ": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 4,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"AKTIVDATUM": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 8,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"E1WPW02": {
+					"$ref": "#/definitions/WPDWGR01.E1WPW02"
+				},
+				"E1WPW03": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/WPDWGR01.E1WPW03"
+						},
+						{
+							"items": {
+								"$ref": "#/definitions/WPDWGR01.E1WPW03"
+							},
+							"type": "array"
+						}
+					]
+				},
+				"E1WPW05": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/WPDWGR01.E1WPW05"
+						},
+						{
+							"items": {
+								"$ref": "#/definitions/WPDWGR01.E1WPW05"
+							},
+							"type": "array"
+						}
+					]
+				},
+				"E1WXX01": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/WPDWGR01.E1WXX01"
+						},
+						{
+							"items": {
+								"$ref": "#/definitions/WPDWGR01.E1WXX01"
+							},
+							"type": "array"
+						}
+					]
+				},
+				"FILIALE": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"WARENGR": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 15,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"WPDWGR01.E1WPW02": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"BEZEICH": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 35,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"HIERARCHIE": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 15,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"RABERLAUBT": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"TASTEERL": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"VERKNUEPFG": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 15,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"VERKSPERRE": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"VORZEICHEN": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"WAAGENART": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"WPDWGR01.E1WPW03": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"AKTIONSNR": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 15,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"BEGINDATUM": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 8,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"BEGINNZEIT": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 4,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"E1WPW04": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/WPDWGR01.E1WPW04"
+						},
+						{
+							"items": {
+								"$ref": "#/definitions/WPDWGR01.E1WPW04"
+							},
+							"type": "array"
+						}
+					]
+				},
+				"ENDDATUM": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 8,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"ENDZEIT": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 4,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"KONDART": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 4,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"KONDSATZ": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"KONDWERT": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 20,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"VORZEICHEN": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 1,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"WPDWGR01.E1WPW04": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"KONDSATZ": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"KONDWERT": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 20,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"MENGE": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"WPDWGR01.E1WPW05": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"MWSKZ": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"WPDWGR01.E1WXX01": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"@SEGMENT": {
+					"$ref": "#/definitions/xsd:string"
+				},
+				"FLDGRP": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 5,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"FLDNAME": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 10,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				},
+				"FLDVAL": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"$": {
+							"maxLength": 40,
+							"type": "string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"@SEGMENT"
+			],
+			"type": "object"
+		},
+		"xsd:string": {
+			"type": "string"
+		}
+	},
+	"description": "JSON Schema erstellt mit XMLSpy v2017 (x64) (http://www.altova.com)",
+	"patternProperties": {
+		"^\\?\\w+$": {
+			"type": "string"
+		}
+	},
+	"properties": {
+		"#": {
+			"type": "string"
+		},
+		"@xmlns:xsd": {
+			"default": "http://www.w3.org/2001/XMLSchema"
+		},
+		"WPDWGR01": {
+			"$ref": "#/definitions/.WPDWGR01"
+		}
+	},
+	"type": "object"
+}
